@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="description" content="领先的3D数据云平台" />
+  <meta name="keywords" content="3D客,3D数据,3D扫描,3D打印,3D创客平台" />
+  <meta name=”apple-mobile-web-app-status-bar-style” content=black” />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>3D客｜领先的3D数据云平台</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
+  <script type="text/javascript"> 
+    var calculate_size = function () {
+    var BASE_FONT_SIZE = 100, docEl = document.documentElement, clientWidth = docEl.clientWidth;
+      if (clientWidth) {
+        docEl.style.fontSize = BASE_FONT_SIZE * (clientWidth / 750) + 'px';
+      }
+    };
+    // Abort if browser does not support addEventListener
+    if (document.addEventListener) {
+      var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+      window.addEventListener(resizeEvt, calculate_size, false);
+      document.addEventListener('DOMContentLoaded', calculate_size, false);
+      calculate_size();
+    }
+  </script>
+</head>
+<body>
+<section id="main">
+  <router-view></router-view> 
+</section>
+
+<div id="ui-components">
+  <ui-components></ui-components>
+</div>
+</body>
+</html>
